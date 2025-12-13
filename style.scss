@@ -1,0 +1,85 @@
+@font-face {
+  font-family: ShadowsIntoLight;
+  src: url(./src/fonts/ShadowsIntoLight-Regular.ttf);
+}
+:root {
+  --primary-color: #0f496f;
+  --button-color: rgb(149, 238, 14);
+}
+
+.witze-wrapper {
+  max-width: 600px;
+  max-height: 800px;
+  margin: auto;
+  border: 5px solid var(--button-color);
+}
+
+.witze-header {
+  text-align: center;
+  margin: 0px;
+}
+
+.witze-title {
+  font-size: 50px;
+  font-family: ShadowsIntoLight;
+  background-color: var(--primary-color);
+  color: greenyellow;
+  padding: 20px;
+}
+.witze-main {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+witze-p {
+  font-size: 20px;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+}
+
+button.newjoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--button-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.savejoke {
+  margin: 20px;
+  padding: 15px;
+  background-color: var(--button-color);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.witze-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: 20px;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+}
+
+.savedjoke-list {
+  margin-top: 20px;
+  color: white;
+}
+
+ul.saved-jokes {
+  list-style-type: square;
+}
+
+u.witz {
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+}

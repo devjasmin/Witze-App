@@ -13,7 +13,8 @@
       </div>
       <div class="witze-main">
         <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
-        <button class="newjoke">Neuen Witz laden</button>
+        <button onclick="loadjoke()" class="newjoke">Neuen Witz laden</button>
+        <p id="joke" class="joke-text"></p>
         <button class="savejoke">Witz speichern</button>
       </div>
       <div class="witze-footer">
@@ -31,5 +32,6 @@
         </div>
       </div>
     </div>
+    <script src="./src/main.js"></script>
   </body>
 </html>

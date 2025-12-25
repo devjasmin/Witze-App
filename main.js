@@ -15,3 +15,14 @@ function loadjoke() {
       console.error("Fehler beim Laden des Jokes:", error);
     });
 }
+
+function savejoke() {
+  const jokeText = document.getElementById("joke").textContent;
+  if (!jokeText) return;
+
+  const list = document.querySelector(".witz");
+  const li = document.createElement("li");
+
+  li.textContent = jokeText;
+  list.appendChild(li);
+}

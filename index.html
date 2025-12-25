@@ -15,20 +15,12 @@
         <witze-p>Klicke auf den Button um einen Witz zu laden!</witze-p>
         <button onclick="loadjoke()" class="newjoke">Neuen Witz laden</button>
         <p id="joke" class="joke-text"></p>
-        <button class="savejoke">Witz speichern</button>
+        <button onclick="savejoke()" class="savejoke">Witz speichern</button>
       </div>
       <div class="witze-footer">
         <p class="subtitle">alle gespeicherten Witze:</p>
-        <div class="savedjoke-list">
-          <ul class="witz">
-            Witz 1
-          </ul>
-          <ul>
-            Witz 2
-          </ul>
-          <ul>
-            Witz 3
-          </ul>
+        <div class="savedjokelist">
+          <ul class="witz"></ul>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+let currentJoke = null;
+
 function loadjoke() {
   const jokeElement = document.getElementById("joke");
 
@@ -8,7 +10,10 @@ function loadjoke() {
   })
     .then((response) => response.json())
     .then((jokeData) => {
-      jokeElement.textContent = jokeData.joke;
+      currentJoke = { id: jokeData.id, text: jokeData.joke };
+      document.getElementById("joke").textContent = currentJoke.text;
+      // console.log("Joke ID:", joke.id); // 👈 HIER IST DIE ID
+      // console.log("Joke Text:", joke.text); // HIER IST DEIN TEXT
     })
     .catch((error) => {
       jokeElement.textContent = "Witz konnte nicht geladen werden.";
@@ -17,12 +22,33 @@ function loadjoke() {
 }
 
 function savejoke() {
-  const jokeText = document.getElementById("joke").textContent;
-  if (!jokeText) return;
+  if (!currentJoke) return; //Sicherstellen, dass ein Witz geladen ist
 
-  const list = document.querySelector(".witz");
-  const li = document.createElement("li");
+  //DOM: Witz anzeigen
+  const witze = document.getElementById("witzliste");
+  const p = document.createElement("p");
+  p.classList.add("saved-joke");
+  p.textContent = currentJoke.text;
+  witze.appendChild(p);
 
-  li.textContent = jokeText;
-  list.appendChild(li);
+  // LocalStorage - Witz speichern
+  const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
+  savedJokes.push(currentJoke);
+  localStorage.setItem("jokes", JSON.stringify(savedJokes));
 }
+
+// Witz aus LocalStorage laden
+function loadSaveJokes() {
+  const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
+  const witze = document.getElementById("witzliste");
+
+  savedJokes.forEach((joke) => {
+    const p = document.createElement("p");
+    p.classList.add("saved-joke");
+    p.textContent = joke.text;
+    witze.appendChild(p);
+  });
+}
+
+// Lädt Witze beim Start
+document.addEventListener("DOMContentLoaded", loadSaveJokes);

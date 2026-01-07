@@ -6,6 +6,7 @@ function loadjoke() {
   fetch("https://icanhazdadjoke.com/", {
     headers: {
       Accept: "application/json",
+      "User-Agent": "Witze-App (https://devjasmin.github.io/witze-app)",
     },
   })
     .then((response) => response.json())

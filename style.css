@@ -1,5 +1,4 @@
 @font-face {
-<<<<<<< HEAD
   font-family: RubikScribble-Regular;
   src: url(./src/fonts/RubikScribble-Regular.ttf);
 }
@@ -11,25 +10,13 @@
 body {
   margin: 0;
   padding: 0;
-=======
-  font-family: ShadowsIntoLight;
-  src: url(./src/fonts/ShadowsIntoLight-Regular.ttf);
-}
-:root {
-  --primary-color: #0f496f;
-  --button-color: rgb(149, 238, 14);
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
 }
 
 .witze-wrapper {
   max-width: 600px;
   max-height: 800px;
   margin: auto;
-<<<<<<< HEAD
   border: 8px solid var(--secondary-color);
-=======
-  border: 5px solid var(--button-color);
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
 }
 
 .witze-header {
@@ -39,15 +26,9 @@ body {
 
 .witze-title {
   font-size: 50px;
-<<<<<<< HEAD
   font-family: RubikScribble-Regular;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-=======
-  font-family: ShadowsIntoLight;
-  background-color: var(--primary-color);
-  color: greenyellow;
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
   padding: 20px;
 }
 
@@ -58,17 +39,12 @@ body {
 }
 
 witze-p {
-<<<<<<< HEAD
   font-size: 17px;
-=======
-  font-size: 16px;
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
   color: white;
   margin: 0px;
   padding: 10px;
 }
 
-<<<<<<< HEAD
 button.newjoke {
   margin: 20px;
   padding: 15px;
@@ -81,36 +57,15 @@ button.newjoke {
 .joke-text {
   font-size: 16px;
   background-color: var(--secondary-color);
-=======
-.joke-text {
-  font-size: 16px;
-  background-color: rgb(162, 241, 154);
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
   color: black;
   padding: 20px;
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
 button.savejoke {
   margin: 20px;
   padding: 15px;
   background-color: var(--secondary-color);
-=======
-button.newjoke {
-  margin: 20px;
-  padding: 15px;
-  background-color: var(--button-color);
-  color: black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-button.savejoke {
-  margin: 20px;
-  padding: 15px;
-  background-color: var(--button-color);
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
   color: black;
   border-radius: 10px;
   cursor: pointer;
@@ -124,7 +79,6 @@ button.savejoke {
 
 .subtitle {
   font-size: 20px;
-<<<<<<< HEAD
   color: var(--secondary-color);
   margin: 0px;
   padding: 10px;
@@ -155,21 +109,4 @@ button.deletejoke {
   color: black;
   border-radius: 10px;
   cursor: pointer;
-=======
-  color: white;
-  margin: 0px;
-  padding: 10px;
 }
-
-.savedjokelist {
-  margin-top: 10px;
-  color: white;
-}
-
-ul.witz {
-  text-align: center;
-  margin: 0;
-  background-color: rgba(221, 221, 221, 0.8666666667);
-  padding-bottom: 10px;
->>>>>>> c81e159f9d4a4ea94542b9dd773919c5ccf84eb3
-}/*# sourceMappingURL=style.css.map */

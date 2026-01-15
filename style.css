@@ -1,6 +1,6 @@
 @font-face {
   font-family: RubikScribble-Regular;
-  src: url(./src/fonts/RubikScribble-Regular.ttf);
+  src: url(./RubikScribble-Regular.ttf);
 }
 :root {
   --primary-color: #0f496f;
@@ -102,11 +102,11 @@ button.savejoke {
   border-radius: 5px;
 }
 
-button.deletejoke {
+button.deleteJoke {
   margin: 20px;
   padding: 15px;
   background-color: var(--secondary-color);
   color: black;
   border-radius: 10px;
   cursor: pointer;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ function loadjoke() {
   fetch("https://icanhazdadjoke.com/", {
     headers: {
       Accept: "application/json",
+      "User-Agent": "Witze-App (https://devjasmin.github.io/witze-app)",
     },
   })
     .then((response) => response.json())
@@ -52,3 +53,36 @@ function loadSaveJokes() {
 
 // Lädt Witze beim Start
 document.addEventListener("DOMContentLoaded", loadSaveJokes);
+
+function renderJokes() {
+  const savedJokes = JSON.parse(localStorage.getItem("jokes") || "[]");
+  const witze = document.getElementById("witzliste");
+
+  witze.innerHTML = ""; // Clear existing jokes
+
+  savedJokes.forEach((joke) => {
+    const p = document.createElement("p");
+    p.classList.add("saved-joke");
+    p.textContent = joke.text;
+
+    const btn = document.createElement("button");
+    btn.textContent = "❌";
+    btn.onclick = () => deletejoke(joke.id);
+
+    p.appendChild(btn);
+    witze.appendChild(p);
+  });
+}
+
+function deletejoke(id) {
+  const Jokedelete = JSON.parse(localStorage.getItem("jokes") || "[]");
+  const updatedJokes = Jokedelete.filter((joke) => joke.id !== id);
+  localStorage.setItem("jokes", JSON.stringify(updatedJokes));
+  renderJokes();
+}
+
+function clearJokes() {
+  localStorage.removeItem("jokes");
+  document.getElementById("witzliste").innerHTML = "";
+}
+clearJokes();
